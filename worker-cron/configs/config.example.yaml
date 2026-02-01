@@ -1,0 +1,10 @@
+# Example configuration. Rename to config.yaml or use environment variables.
+worker:
+  interval: 1m
+
+# Uncomment and fill when using a scheduler plugin (pkg/scheduler/cron, etc.)
+# cron:
+#   spec: "0 * * * *"   # every hour
+# cloud_scheduler:
+#   project: "my-project"
+#   location: "us-central1"

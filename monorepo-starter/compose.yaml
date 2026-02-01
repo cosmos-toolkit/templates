@@ -1,0 +1,31 @@
+# Monorepo starter: API + Worker. Optional: add RabbitMQ for production queue.
+services:
+  api:
+    build:
+      context: .
+      dockerfile: build/Dockerfile.api
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: .
+      dockerfile: build/Dockerfile.worker
+    depends_on:
+      - api
+    # Optional: use RabbitMQ instead of in-memory consumer
+    # environment:
+    #   - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/
+    #   - QUEUE=tasks
+    restart: unless-stopped
+
+  # Optional: uncomment to use RabbitMQ for the worker
+  # rabbitmq:
+  #   image: rabbitmq:3-management-alpine
+  #   ports:
+  #     - "5672:5672"
+  #     - "15672:15672"
+  #   restart: unless-stopped

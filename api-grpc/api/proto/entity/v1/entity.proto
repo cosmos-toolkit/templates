@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package entity.v1;
+
+option go_package = "github.com/your-org/your-app/api/pb/entity/v1;entityv1";
+
+import "google/protobuf/timestamp.proto";
+
+// EntityService exposes entity operations over gRPC.
+service EntityService {
+  rpc GetEntity(GetEntityRequest) returns (Entity);
+  rpc CreateEntity(CreateEntityRequest) returns (Entity);
+}
+
+message Entity {
+  string id = 1;
+  google.protobuf.Timestamp created_at = 2;
+  google.protobuf.Timestamp updated_at = 3;
+}
+
+message GetEntityRequest {
+  string id = 1;
+}
+
+message CreateEntityRequest {
+  string id = 1;
+}

@@ -1,0 +1,7 @@
+# Example configuration. Rename to config.yaml or use environment variables.
+# Commands that need config can load this via pkg/env or a config package.
+cli:
+  verbose: false
+# Uncomment when commands use DB, API, etc.
+# database:
+#   url: "postgres://user:pass@localhost:5432/dbname?sslmode=disable"

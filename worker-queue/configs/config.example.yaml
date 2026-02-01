@@ -1,0 +1,10 @@
+# Example configuration. Rename to config.yaml or use environment variables.
+worker:
+  concurrency: 1
+# Uncomment and fill when using a queue plugin (pkg/queue/rabbitmq, pkg/queue/sqs, etc.)
+# rabbitmq:
+#   url: "amqp://guest:guest@localhost:5672/"
+#   queue: "tasks"
+# sqs:
+#   region: "us-east-1"
+#   queue_url: "https://sqs.us-east-1.amazonaws.com/123456789/my-queue"

@@ -1,0 +1,12 @@
+# Example configuration. Rename to config.yaml or use environment variables.
+server:
+  addr: ":8080"
+  read_timeout: 15s
+  write_timeout: 15s
+# Uncomment and fill when using plugins (pkg/database, pkg/cache, etc.)
+# database:
+#   url: "postgres://user:pass@localhost:5432/dbname?sslmode=disable"
+# cache:
+#   url: "redis://localhost:6379/0"
+# auth:
+#   jwt_secret: "your-secret"
