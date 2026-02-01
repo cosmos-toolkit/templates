@@ -1,0 +1,8 @@
+# Example configuration. Rename to config.yaml or use environment variables.
+server:
+  addr: ":9090"
+# Uncomment and fill when using plugins (pkg/database, pkg/cache, etc.)
+# database:
+#   url: "postgres://user:pass@localhost:5432/dbname?sslmode=disable"
+# cache:
+#   url: "redis://localhost:6379/0"
